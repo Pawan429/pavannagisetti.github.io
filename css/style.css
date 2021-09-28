@@ -1494,3 +1494,193 @@ p {
           font-size: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+ 
+
+
+.slides {
+
+
+display: flex;
+
+
+overflow-x: auto;
+
+
+scroll-snap-type: x mandatory;
+
+
+}
+
+
+.slides > div {
+
+
+display: flex;
+
+
+flex-shrink: 0;
+
+
+width: 100%;
+
+
+height: 400px;
+
+
+scroll-snap-align: start;
+
+
+scroll-behavior: smooth;
+
+
+background: #f4623a;
+
+
+justify-content: center;
+
+
+align-items: center;
+
+
+font-size: 100px;
+
+
+}
+
+.slides > p {
+
+
+align-items: bottom;
+
+
+font-size: 100px;
+
+
+}
+
+.post-list {
+    animation: slide infinite 3s alternate;
+}
+
+@keyframes slides {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: -100px;
+  }
+  100% {
+    margin-left: -200px;
+  }
+}
+
+.portfolio_img {
+  flex-basis: 50%
+}
+.portfolio_desc {
+  font-size: 20px;
+  padding-left: 20px;
+  color: #293651;
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+.port_contain {
+  width: 100%;
+}
+.port_row {
+  overflow: scroll;
+  width: 100%;
+}
+.port_row__inner {
+  transition: 450ms transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 70.3125px 0;
+  padding-bottom: 10px;
+}
+.port_tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 140.625px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+}
+.port_tile__img {
+  width: 250px;
+  height: 140.625px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.port_tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  transition: 450ms opacity;
+}
+.port_tile__details:after,
+.port_tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: #000;
+}
+.port_tile__details:after {
+  margin-top: -25px;
+  margin-left: -20px;
+  width: 0px;
+  height: 0px;
+  border: 0px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 40%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.port_tile__details:before {
+  /*content: 'View';*/
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
+}
+.port_tile:hover .port_tile__details {
+  opacity: 1;
+}
+.port_tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+.port_row__inner:hover {
+  transform: translate3d(-62.5px, 0, 0);
+}
+.port_row__inner:hover .port_tile {
+  opacity: 0.3;
+}
+.port_row__inner:hover .port_tile:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.port_tile:hover ~ .port_tile {
+  transform: translate3d(125px, 0, 0);
+}

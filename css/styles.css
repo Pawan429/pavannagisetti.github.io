@@ -11293,6 +11293,13 @@ body {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
+.text-white-175 {
+  color: rgba(255, 255, 255, 0.75) !important;
+  padding-bottom: calc(10rem - 4.5rem);
+}
+
+
+
 .btn-xl {
   padding: 1.25rem 2.25rem;
   font-size: 0.85rem;
