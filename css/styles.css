@@ -11285,6 +11285,13 @@ body {
   height: 100%;
 }
 
+.portfolio-section {
+  padding: 3rem 0;
+}
+.contact-section {
+  padding: 1rem 0;
+}
+
 .page-section {
   padding: 8rem 0;
 }
